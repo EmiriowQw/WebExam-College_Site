@@ -103,6 +103,17 @@ p {
   opacity: 0.3;
 }
 
+/* Hero with Background Image */
+.hero-with-image {
+  background: linear-gradient(135deg, rgba(0, 86, 179, 0.85) 0%, rgba(23, 162, 184, 0.85) 100%), 
+              url('../images/students-campus.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-with-image::before {
+  display: none;
+}
+
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -561,5 +572,116 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 .password-strength-text {
   font-size: 0.875rem;
   margin-top: 0.25rem;
+}
+
+/* Image Sections */
+.image-section {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-section:hover img {
+  transform: scale(1.05);
+}
+
+.campus-showcase {
+  margin: 3rem 0;
+}
+
+.campus-showcase img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.program-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.student-life-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 2rem 1rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+.feature-image-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature-image-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  border-radius: 12px;
+}
+
+.feature-image-card h3,
+.feature-image-card p {
+  position: relative;
+  z-index: 1;
 }
 
