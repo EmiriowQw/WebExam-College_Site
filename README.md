@@ -6,9 +6,9 @@ A professional, responsive brochure-style website for Engineering College, built
 
 This project is a comprehensive static website designed to showcase Engineering College's programs, admissions information, student life, and provide easy contact and registration options for prospective students. The website follows modern web development best practices with a focus on accessibility, responsive design, and user experience.
 
-**Live URL:** [To be added after GitHub Pages deployment]
+**Live URL:** https://emiriowqw.github.io/WebExam-College_Site/
 
-**Repository:** https://github.com/[username]/engineering-college-static-site
+**Repository:** https://github.com/EmiriowQw/WebExam-College_Site
 
 ## 📄 Page Map
 
