@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to Engineering College - Complete your registration form to start your journey in engineering education.">
+  <title>Registration - Engineering College</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Fixed Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-mortarboard-fill"></i> Engineering College
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="programs.html">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admissions.html">Admissions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="student-life.html">Student Life</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary text-white ms-lg-2 active" aria-current="page" href="registration.html">Apply Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="py-5 bg-light-section">
+      <div class="container">
+        <h1 class="display-4 text-center mb-4">Student Registration</h1>
+        <p class="lead text-center mb-0">Take the first step towards your engineering career. Complete the registration form below to apply to Engineering College.</p>
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Success Message -->
+            <div id="registrationSuccess" class="alert alert-success" role="alert" style="display: none;">
+              <h4 class="alert-heading"><i class="bi bi-check-circle-fill"></i> Registration Successful!</h4>
+              <p>Thank you for registering with Engineering College. Your application has been received and is being processed.</p>
+              <hr>
+              <p class="mb-0">You will receive a confirmation email shortly with further instructions and next steps. Our admissions team will review your application and contact you within 2-3 weeks.</p>
+              <div class="mt-4">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+                <a href="admissions.html" class="btn btn-outline-primary ms-2">Learn About Next Steps</a>
+              </div>
+            </div>
+
+            <!-- Registration Form Container -->
+            <div class="form-container">
+              <h2 class="mb-4">Registration Form</h2>
+              <p class="text-muted mb-4">All fields marked with <span class="text-danger">*</span> are required.</p>
+
+              <form id="registrationForm" novalidate>
+                <!-- Personal Information Section -->
+                <div class="mb-5">
+                  <h4 class="text-primary mb-3"><i class="bi bi-person-fill"></i> Personal Information</h4>
+                  
+                  <!-- Full Name -->
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" required 
+                           placeholder="Enter your full name as it appears on official documents">
+                    <div class="invalid-feedback">Please enter your full name (at least 3 characters).</div>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required 
+                           placeholder="your.email@example.com">
+                    <small class="form-text text-muted">We'll use this email for all communications regarding your application.</small>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required 
+                           placeholder="+1 (555) 123-4567">
+                    <small class="form-text text-muted">Include country code if applicable.</small>
+                    <div class="invalid-feedback">Please enter a valid phone number (at least 10 digits).</div>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                </div>
+
+                <!-- Program Information Section -->
+                <div class="mb-5">
+                  <h4 class="text-primary mb-3"><i class="bi bi-book-fill"></i> Program Information</h4>
+                  
+                  <!-- Desired Program -->
+                  <div class="mb-3">
+                    <label for="program" class="form-label">Desired Program <span class="text-danger">*</span></label>
+                    <select class="form-select" id="program" name="program" required>
+                      <option value="">-- Select a Program --</option>
+                      <option value="computer">Bachelor of Science in Computer Engineering</option>
+                      <option value="mechanical">Bachelor of Science in Mechanical Engineering</option>
+                      <option value="electrical">Bachelor of Science in Electrical Engineering</option>
+                      <option value="civil">Bachelor of Science in Civil Engineering</option>
+                    </select>
+                    <small class="form-text text-muted">Choose your preferred engineering program. You can discuss program changes during the enrollment process.</small>
+                    <div class="invalid-feedback">Please select a program.</div>
+                    <div class="valid-feedback">Great choice!</div>
+                  </div>
+
+                  <!-- Study Mode -->
+                  <div class="mb-3 study-mode-container">
+                    <label class="form-label">Study Mode <span class="text-danger">*</span></label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="studyMode" id="fullTime" value="full-time" required>
+                      <label class="form-check-label" for="fullTime">
+                        <strong>Full-Time</strong> - Complete your degree in 4 years with a full course load.
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="studyMode" id="partTime" value="part-time" required>
+                      <label class="form-check-label" for="partTime">
+                        <strong>Part-Time</strong> - Study at your own pace while balancing work or other commitments.
+                      </label>
+                    </div>
+                    <small class="form-text text-muted d-block mt-2">Full-time students typically take 12-18 credits per semester.</small>
+                  </div>
+
+                  <!-- Intended Intake -->
+                  <div class="mb-3">
+                    <label for="intake" class="form-label">Intended Intake Date <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="intake" name="intake" required 
+                           min="2025-01-01" style="max-width: 250px;">
+                    <small class="form-text text-muted">When do you plan to start your studies? We have Fall (August) and Spring (January) intakes.</small>
+                    <div class="invalid-feedback">Please select your intended start date.</div>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                </div>
+
+                <!-- Account Security Section -->
+                <div class="mb-5">
+                  <h4 class="text-primary mb-3"><i class="bi bi-shield-lock-fill"></i> Account Security</h4>
+                  
+                  <!-- Password -->
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password" required 
+                           placeholder="Create a strong password (minimum 8 characters)">
+                    <div class="password-strength">
+                      <div class="password-strength-bar"></div>
+                    </div>
+                    <small class="password-strength-text"></small>
+                    <small class="form-text text-muted d-block mt-1">Use a combination of letters, numbers, and special characters for a strong password.</small>
+                    <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                    <div class="valid-feedback">Strong password!</div>
+                  </div>
+
+                  <!-- Confirm Password -->
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required 
+                           placeholder="Re-enter your password">
+                    <div class="invalid-feedback">Passwords must match.</div>
+                    <div class="valid-feedback">Passwords match!</div>
+                  </div>
+                </div>
+
+                <!-- Additional Information Section -->
+                <div class="mb-5">
+                  <h4 class="text-primary mb-3"><i class="bi bi-info-circle-fill"></i> Additional Information</h4>
+                  
+                  <!-- Scholarship Interest (Optional) -->
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="scholarship" name="scholarship" value="yes">
+                      <label class="form-check-label" for="scholarship">
+                        <strong>I am interested in scholarship opportunities</strong>
+                      </label>
+                    </div>
+                    <small class="form-text text-muted d-block mt-2">Check this box if you would like to be considered for merit-based scholarships and financial aid. Our Financial Aid Office will contact you with more information.</small>
+                  </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="mb-4">
+                  <h4 class="text-primary mb-3"><i class="bi bi-file-text-fill"></i> Terms and Conditions</h4>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                    <label class="form-check-label" for="terms">
+                      I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a> <span class="text-danger">*</span>
+                    </label>
+                    <div class="invalid-feedback d-block" style="display: none !important;">
+                      You must agree to the terms and conditions before submitting.
+                    </div>
+                  </div>
+
+                  <small class="form-text text-muted d-block mt-2">
+                    By submitting this form, you acknowledge that the information provided is accurate and complete. You also consent to Engineering College contacting you regarding your application.
+                  </small>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid gap-2 d-md-flex">
+                  <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" disabled>
+                    <i class="bi bi-send-fill"></i> Submit Application
+                  </button>
+                  <a href="index.html" class="btn btn-outline-secondary btn-lg">
+                    <i class="bi bi-x-circle"></i> Cancel
+                  </a>
+                </div>
+
+                <p class="text-muted mt-3 small">
+                  <i class="bi bi-lock-fill"></i> Your information is secure and will be used only for application processing purposes.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Tips -->
+    <section class="py-5 bg-light-section">
+      <div class="container">
+        <h2 class="section-title">Application Tips</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center h-100 p-4">
+              <i class="bi bi-check2-circle" style="font-size: 3rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+              <h5>Double-Check Information</h5>
+              <p class="card-text small">Ensure all information is accurate before submitting. Errors may delay processing.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center h-100 p-4">
+              <i class="bi bi-envelope-check" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+              <h5>Check Your Email</h5>
+              <p class="card-text small">Monitor your email for confirmation and updates about your application status.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center h-100 p-4">
+              <i class="bi bi-clock-history" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+              <h5>Submit Early</h5>
+              <p class="card-text small">Applications submitted by priority deadlines receive preference for scholarships.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center h-100 p-4">
+              <i class="bi bi-question-circle" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+              <h5>Need Help?</h5>
+              <p class="card-text small">Contact our admissions office if you have questions or need assistance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">What Happens Next?</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="timeline-item">
+              <h5><i class="bi bi-1-circle-fill text-primary"></i> Confirmation Email</h5>
+              <p>You'll receive an immediate confirmation email with your application ID and login credentials for the applicant portal.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h5><i class="bi bi-2-circle-fill text-primary"></i> Document Submission</h5>
+              <p>Upload required documents (transcripts, test scores, recommendations) through your applicant portal within 7 days.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h5><i class="bi bi-3-circle-fill text-primary"></i> Application Review</h5>
+              <p>Our admissions committee will review your complete application. This process typically takes 2-3 weeks.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h5><i class="bi bi-4-circle-fill text-primary"></i> Admission Decision</h5>
+              <p>You'll receive an email notification with your admission decision and next steps for accepted students.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h5><i class="bi bi-5-circle-fill text-primary"></i> Enrollment</h5>
+              <p>Accepted students can confirm their enrollment by paying the deposit and completing registration for classes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section class="py-5 bg-light-section">
+      <div class="container text-center">
+        <h2 class="mb-4">Have Questions About the Application Process?</h2>
+        <p class="lead mb-4">Our admissions team is here to help you every step of the way.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg me-3">Contact Admissions</a>
+        <a href="admissions.html" class="btn btn-outline-primary btn-lg">View Admissions Info</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5><i class="bi bi-mortarboard-fill"></i> Engineering College</h5>
+          <p>Building tomorrow's innovators through excellence in engineering education.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links mb-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+          <p class="mb-0">
+            <i class="bi bi-envelope"></i> info@engineeringcollege.edu<br>
+            <i class="bi bi-telephone"></i> (555) 123-4567
+          </p>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Engineering College. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
